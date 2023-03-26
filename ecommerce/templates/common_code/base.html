@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<title>{% block title %} {% endblock title %}</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    { % block css % }
+    <link rel="stylesheet" href="{% static 'css/boot.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    { % endblock css % }
+    
+</head>
+<body class="container">
+    
+    <div >
+        <header>
+
+            <!-- Nav Start-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary  "> 
+                <div class="container-fluid">
+
+                    <a href="#" class="navbar-brand ">
+                        <img src= "{% static 'images/ai.png' %}" alt="logo" style="width: 150px;">
+                    </a> 
+    
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto justify-content-end">
+                      <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="/home/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="/laptop/">Electronics</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Fashion
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="{% url 'shirt'%}">Shirts</a></li>
+                          <li><a class="dropdown-item" href="/cloth/pant/">Pants</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="/cloth/tshirt/">T-shirts</a></li>
+                        </ul>
+                      </li>
+        
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="/contactus/">Contact us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="/cloth/reg/">Lon in</a>
+                      </li>
+        
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success text-white" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+
+            <!-- Nav End-->
+
+ <!--Slider-->
+ <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item cimg active">
+        <img src="{% static 'E:/newproject/ecommerce/static/images/ml.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item cimg">
+        <img src="{% static 'E:/newproject/ecommerce/static/images/pant.jpg' %}"  class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item cimg">
+        <img src="{% static 'E:/newproject/ecommerce/static/images/dl.jpg' %}"  class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <!-- End Slider-->
+
+        </header>
+
+    </div>
+
+</body>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+{% block content %}
+
+{% endblock content %}
+
+<footer>
+
+      
+<!--
+
+                <a href="#" class="navbar-brand">
+                    <img src= "{% static 'images/ai.png' %}" alt="logo" style="width: 150px;">
+                </a> 
+
+-->
+    
+
+
+</footer>
+</html>

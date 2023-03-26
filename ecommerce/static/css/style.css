@@ -1,0 +1,15 @@
+
+body {
+    background-color: rgb(171, 231, 179);
+  }
+
+p{color: blue;}
+
+* {color: brown;}
+
+.cselector {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  #iselector{color: rgb(7, 7, 7);}

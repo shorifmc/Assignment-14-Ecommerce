@@ -1,0 +1,23 @@
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock css %}
+
+
+
+{% block content %}
+
+
+<form action=""  method="POST" novalidate > 
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+
+</form>
+
+
+
+
+
+
+{% endblock content %}
